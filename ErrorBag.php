@@ -35,4 +35,13 @@ class ErrorBag {
 
 		return $data;
 	}
+
+	/**
+	 * Convenience method to encode are to JSON
+	 * @return string
+	 */
+	public function toJSON()
+	{
+		return json_encode( $this->toArray() );
+	}
 }
