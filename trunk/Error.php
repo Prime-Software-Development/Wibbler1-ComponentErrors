@@ -9,14 +9,13 @@ namespace TrunkSoftware\Component\Errors;
 
 class Error implements ErrorInterface {
 
-	private $_message = null;
-	private $_code = null;
+	private $_message;
+	private $_code;
 
-	public function __construct( $message, $code = null ) {
+	public function __construct($message, $code = null) {
 
-		$this->_message = $message;
-		$this->_code = $code;
-
+		$this->setErrorMessage($message);
+		$this->setErrorCode($code);
 	}
 
 	public function getErrorMessage() {
@@ -43,7 +42,6 @@ class Error implements ErrorInterface {
 	}
 
 	public function __toString() {
-		// TODO: Implement __toString() method.
 		return $this->_code ." - " . $this->_message;
 	}
 }
