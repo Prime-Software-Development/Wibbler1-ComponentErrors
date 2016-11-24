@@ -4,13 +4,50 @@ namespace TrunkSoftware\Component\Errors;
 class ErrorBag implements \Countable {
 
 	/**
-	 * @var Error[] $errors
+	 * @var ErrorInterface[] $errors
 	 */
 	private $errors = array();
 
+	/**
+	 * Add error
+	 *
+	 * @param ErrorInterface $error
+	 *
+	 * @return $this
+	 */
 	public function addError( ErrorInterface $error )
 	{
 		$this->errors[] = $error;
+
+		return $this;
+	}
+
+	/**
+	 * Add array of errors
+	 *
+	 * @param ErrorInterface[] $errors
+	 *
+	 * @return $this
+	 */
+	public function addErrors(array $errors)
+	{
+		foreach($errors as $error) {
+			$this->addError($error);
+		}
+
+		return $this;
+	}
+
+	/**
+	 * Merge given ErrorBag into self
+	 *
+	 * @param ErrorBag $bag
+	 *
+	 * @return $this
+	 */
+	public function merge(ErrorBag $bag) {
+
+		$this->addErrors($bag->getErrors());
 
 		return $this;
 	}
