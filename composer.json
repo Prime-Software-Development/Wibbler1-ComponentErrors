@@ -15,7 +15,7 @@
   },
   "autoload": {
 	"psr-4": {
-	  "Trunk\\Component\\Errors\\": ""
+	  "Trunk\\Component\\Errors\\": "src"
 	},
 	"exclude-from-classmap": [
 	  "/Tests/"
