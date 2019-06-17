@@ -1,11 +1,5 @@
 <?php
-namespace TrunkSoftware\Component\Errors;
-/**
- * Created by PhpStorm.
- * User: trunk
- * Date: 05/01/16
- * Time: 16:53
- */
+namespace Trunk\Component\Errors;
 
 interface ErrorInterface {
 	// Get error message

@@ -1,5 +1,5 @@
 <?php
-namespace TrunkSoftware\Component\Errors;
+namespace Trunk\Component\Errors;
 
 class ErrorBag implements \Countable {
 
