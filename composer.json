@@ -1,13 +1,12 @@
 {
-  "name": "trunk/errors",
+  "name": "primesoftwaredevelopment/errors",
   "type": "library",
-  "description": "TrunkSoftware Error Component",
-  "homepage": "http://www.trunknetworks.com/",
-  "keywords": [],
+  "description": "Prime Software Development Error Component",
+  "homepage": "http://www.primesoftwaredevelopment.co.uk/",
   "authors": [
 	{
 	  "name": "Chris Weller",
-	  "email": "chris.weller@trunknetworks.com"
+	  "email": "chris@primesoftwaredevelopment.co.uk"
 	}
   ],
   "require": {
